@@ -5,7 +5,7 @@ export const globalStyle = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: COLORS.white,
-    paddingHorizontal:"1%"
+    // paddingHorizontal:"1%"
   },
   title: {
     color: COLORS.black,

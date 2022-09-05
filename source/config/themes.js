@@ -5,11 +5,11 @@ const {width, height} = Dimensions.get('window');
 
 export const COLORS = {
   white: '#ffffff',
-  primary: '#3254',
+  primary: '#078255',
   black: '#000',
   gray: '#B8B8B8',
   lightGray: '#E0E0E0',
-  brown:"#925F06"
+  secondary:"#112B3C"
 };
 
 export const SHADOW = {
