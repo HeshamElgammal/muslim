@@ -5,7 +5,7 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import React from 'react';
 import {COLORS, SIZES, SPACING} from '../../config/themes';
@@ -20,26 +20,23 @@ const Header = ({name, style, resizeMode, back = false}) => {
       style={[styles.bg, style]}
       resizeMode={resizeMode ? resizeMode : 'cover'}>
       <View style={[styles.container, style]}>
+        <View style={styles.btn} />
+        <Text style={styles.title}>{name}</Text>
+
         {back ? (
           <TouchableOpacity
             onPress={() => {
               navigation.goBack();
             }}>
             <Image
-              source={require('../../assets/imgs/back.png')}
+              source={require('../../assets/imgs/next.png')}
               style={styles.btn}
               resizeMode="contain"
             />
           </TouchableOpacity>
         ) : (
-          <View
-            style={styles.btn}
-          />
+          <View style={styles.btn} />
         )}
-        <Text style={styles.title}>{name}</Text>
-        <View
-          style={styles.btn}
-        />
       </View>
     </ImageBackground>
   );
@@ -72,9 +69,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     // marginTop:"5%"
   },
-  btn:{
+  btn: {
     width: SIZES.avatar - 25,
     height: SIZES.avatar - 25,
     tintColor: COLORS.white,
-  }
+  },
 });
