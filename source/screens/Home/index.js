@@ -36,10 +36,19 @@ const Home = () => {
               resizeMode="cover"
               style={styles.img}
             />
-            <Text style={[globalStyle.title, {color: COLORS.white,textAlign:"center",marginVertical:SPACING.m-5}]}>
+            <Text
+              style={[
+                globalStyle.title,
+                {
+                  color: COLORS.white,
+                  textAlign: 'center',
+                  marginVertical: SPACING.m - 5,
+                },
+              ]}>
               القرآن الكريم
             </Text>
           </TouchableOpacity>
+          
           <TouchableOpacity
             style={styles.Item}
             onPress={() => {
@@ -51,9 +60,17 @@ const Home = () => {
             <Image
               source={require('../../assets/imgs/hand.png')}
               resizeMode="cover"
-              style={[styles.img,{tintColor:COLORS.white,}]}
+              style={[styles.img, {tintColor: COLORS.white}]}
             />
-            <Text style={[globalStyle.title, {color: COLORS.white,textAlign:"center",marginVertical:SPACING.m-5}]}>
+            <Text
+              style={[
+                globalStyle.title,
+                {
+                  color: COLORS.white,
+                  textAlign: 'center',
+                  marginVertical: SPACING.m - 5,
+                },
+              ]}>
               {azkarAm.title}
             </Text>
           </TouchableOpacity>
@@ -68,9 +85,17 @@ const Home = () => {
             <Image
               source={require('../../assets/imgs/hand.png')}
               resizeMode="cover"
-              style={[styles.img,{tintColor:COLORS.white,}]}
+              style={[styles.img, {tintColor: COLORS.white}]}
             />
-            <Text style={[globalStyle.title, {color: COLORS.white,textAlign:"center",marginVertical:SPACING.m-5}]}>
+            <Text
+              style={[
+                globalStyle.title,
+                {
+                  color: COLORS.white,
+                  textAlign: 'center',
+                  marginVertical: SPACING.m - 5,
+                },
+              ]}>
               {azkarBm.title}
             </Text>
           </TouchableOpacity>
@@ -85,9 +110,17 @@ const Home = () => {
             <Image
               source={require('../../assets/imgs/hand.png')}
               resizeMode="cover"
-              style={[styles.img,{tintColor:COLORS.white,}]}
+              style={[styles.img, {tintColor: COLORS.white}]}
             />
-            <Text style={[globalStyle.title, {color: COLORS.white,textAlign:"center",marginVertical:SPACING.m-5}]}>
+            <Text
+              style={[
+                globalStyle.title,
+                {
+                  color: COLORS.white,
+                  textAlign: 'center',
+                  marginVertical: SPACING.m - 5,
+                },
+              ]}>
               {azkarAlsalh.title}
             </Text>
           </TouchableOpacity>
@@ -101,7 +134,15 @@ const Home = () => {
               resizeMode="cover"
               style={styles.img}
             />
-            <Text style={[globalStyle.title, {color: COLORS.white,textAlign:"center",marginVertical:SPACING.m-5}]}>
+            <Text
+              style={[
+                globalStyle.title,
+                {
+                  color: COLORS.white,
+                  textAlign: 'center',
+                  marginVertical: SPACING.m - 5,
+                },
+              ]}>
               المسبحة
             </Text>
           </TouchableOpacity>

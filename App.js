@@ -1,6 +1,6 @@
-import {StatusBar, StyleSheet, Text, View} from 'react-native';
+import {ScrollView, StatusBar, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
-import {Ahades, Home, Quran, Surah, Masbaha, Azkar} from './source/screens';
+import {Ahades, Home, Quran, Surah, Masbaha, Azkar, TestSurah} from './source/screens';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {COLORS} from './source/config/themes';
@@ -29,6 +29,7 @@ const App = () => {
           <Stack.Screen component={Quran} name="Quran" />
           <Stack.Screen component={Surah} name="Surah" />
           <Stack.Screen component={Azkar} name="Azkar" />
+          <Stack.Screen component={TestSurah} name="TestSurah" />
           <Stack.Screen component={Masbaha} name="Masbaha" />
         </Stack.Navigator>
       </NavigationContainer>

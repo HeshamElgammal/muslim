@@ -12,7 +12,7 @@ import {QuranSurahName} from '../../config/quranSurahName';
 import {COLORS, SIZES, SPACING} from '../../config/themes';
 import {useNavigation} from '@react-navigation/native';
 import {Header} from '../../components';
-
+import QuranJson from '../../config/quranSurahName/quran.json';
 const Quran = () => {
   const navigation = useNavigation();
   return (
@@ -31,7 +31,10 @@ const Quran = () => {
             <TouchableOpacity
               style={styles.surahContainer}
               onPress={() => {
-                navigation.navigate('Surah', {id: index});
+                navigation.navigate('TestSurah', {
+                  id: index,
+                  surah: QuranJson.data.surahs[index],
+                });
               }}>
               <View style={styles.subContainerSurah}>
                 <Text style={styles.TitleSurah}>{item.name}</Text>
@@ -73,6 +76,21 @@ const Quran = () => {
                   عدد الآيات :
                 </Text>
               </View>
+              <TouchableOpacity style={[styles.btnAbslute]}
+              onPress={() => {
+                navigation.navigate('Surah', {
+                  id: index,
+                });
+              }}
+              >
+                <Text
+                  style={[
+                    styles.TitleSurah,
+                    {fontSize: SIZES.h4, fontWeight: '400'},
+                  ]}>
+                  لعرض الآيات منفصلة اضغط هنا
+                </Text>
+              </TouchableOpacity>
             </TouchableOpacity>
           </ImageBackground>
         )}
@@ -100,19 +118,30 @@ const styles = StyleSheet.create({
     fontSize: SIZES.h1,
     fontWeight: 'bold',
   },
-  bgItem:{
+  bgItem: {
     width: '100%',
     height: SIZES.height * 0.12,
     backgroundColor: COLORS.gray,
     marginBottom: SPACING.s,
     borderRadius: SIZES.Sradius,
   },
-  bgNum:{
+  bgNum: {
     width: SIZES.width * 0.1,
     height: SIZES.height * 0.055,
     alignItems: 'center',
     justifyContent: 'center',
     marginHorizontal: SPACING.vS,
-
+  },
+  btnAbslute: {
+    marginHorizontal: SIZES.width * 0.04,
+    position: 'absolute',
+    bottom: '5%',
+    right: '0%',
+    backgroundColor: COLORS.lightGray,
+    paddingHorizontal: '3%',
+    paddingVertical: '1%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: SIZES.Sradius,
   }
 });

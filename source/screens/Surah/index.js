@@ -10,7 +10,7 @@ const Surah = props => {
     <View style={[globalStyle.container, {alignItems: 'center'}]}>
       <Header
         name={QuranJson.data.surahs[route.params.id].name}
-        style={{height: SIZES.height * 0.2}}
+        style={{height: SIZES.height * 0.13}}
         resizeMode="stretch"
         back
       />
